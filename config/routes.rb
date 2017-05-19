@@ -8,4 +8,9 @@ Rails.application.routes.draw do
 
   post "dinosaurs" => "dinosaurs#create"
 
+  get 'dinosaurs/:id/edit' => 'dinosaurs#edit', as: :edit_dinosaur
+  patch "dinosaurs/:id" => "dinosaurs#update"
+
+  delete "dinosaurs/:id" => "dinosaurs#destroy"
+
 end
