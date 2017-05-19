@@ -8,9 +8,20 @@
 <main>
   <h3> The following dinosaurs were found in the valley</h3>
 
+
+
+<h1>Dinosaurs</h1>
+
+
+
 <% @dinosaurs.each do |dinosaur| %>
-  <p><%= dinosaur.name %></p>
+  <p><%= link_to dinosaur.name, dinosaur_path(dinosaur.id) %></p>
 <% end %>
+
+<hr>
+
+<%= link_to "[New Dinosaur]", new_dinosaur_path %>
+
 
 </main>
 <br />
